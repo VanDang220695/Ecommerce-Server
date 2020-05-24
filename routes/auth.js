@@ -2,10 +2,10 @@ const express = require('express');
 
 const { signup, login } = require('../controllers/auth');
 const {
-  handlerValidationResult,
-  validationUserLogin,
-  validationUserSignup,
-} = require('../validator');
+	handlerValidationResult,
+	validationUserLogin,
+	validationUserSignup,
+} = require('../helpers/validator');
 
 const router = express.Router();
 
