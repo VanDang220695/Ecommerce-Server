@@ -11,6 +11,17 @@ const validationCategory = [
 		.withMessage('Category name is not valid'),
 ];
 
+const validationCategoryId = [
+	check('id', 'Category id is required').not().isEmpty(),
+];
+
+const validationUpdateCategory = [
+	...validationCategory,
+	...validationCategoryId,
+];
+
 module.exports = {
 	validationCategory,
+	validationCategoryId,
+	validationUpdateCategory,
 };

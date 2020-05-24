@@ -8,7 +8,7 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-const { HTTP_CODE } = require('./constants');
+const { HTTP_CODE } = require('./helpers/constants');
 
 // App
 const app = express();

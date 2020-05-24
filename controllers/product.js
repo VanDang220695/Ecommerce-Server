@@ -76,8 +76,8 @@ const update = async (req, res, next) => {
 
 const getOne = async (req, res, next) => {
 	try {
-		const { productId } = req.body;
-		const product = await Product.findByIdAndRemove(productId);
+		const { id } = req.body;
+		const product = await Product.findByIdAndRemove(id);
 		if (!product) {
 			return next(createError(404));
 		}
