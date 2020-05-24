@@ -1,15 +1,15 @@
 const express = require('express');
 
+const { handlerValidationResult } = require('../helpers/utils');
+
 const {
-	handlerValidationResult,
 	validationUpdateProduct,
 	validationProductId,
 	validationProduct,
-} = require('../helpers/validator');
+} = require('../helpers/validation/product');
 
 const fileUpload = require('../middleware/fileUpload');
-const checkAuth = require('../middleware/checkAuth');
-const { checkRoleAdmin } = require('../middleware/checkPermission');
+const { checkRoleAdmin, checkAuth } = require('../middleware/checkPermission');
 
 const {
 	create,

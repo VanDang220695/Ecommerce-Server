@@ -1,11 +1,11 @@
 const express = require('express');
 
 const { signup, login } = require('../controllers/auth');
+const { handlerValidationResult } = require('../helpers/utils');
 const {
-	handlerValidationResult,
 	validationUserLogin,
 	validationUserSignup,
-} = require('../helpers/validator');
+} = require('../helpers/validation/auth');
 
 const router = express.Router();
 
